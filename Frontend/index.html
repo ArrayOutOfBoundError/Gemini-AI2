@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Gemini</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Your Own Gemini Is Here !</h1>
+    <div class="container">
+      <form id="gemini-form">
+        <div class = "mainContainer">
+          <div class="icons">
+            <i
+              onclick="listen()"
+              id="microphone"
+              class="fa-solid fa-microphone"
+            ></i>
+            <label for="file-upload">
+              <i id="upload" class="fa-solid fa-paperclip"></i>
+            </label>
+            <input type="file" id="file-upload" />
+          </div>
+          <div class="input-fld">
+            <input
+              type="text"
+              name="prompt"
+              id="text-prompt"
+              placeholder="Enter anything here!"
+            />
+            <button type="submit" class="send-btn">Send</button>
+          </div>
+          <button type="button" onclick="refresh()" class="refresh-btn">
+            Refresh
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="response">
+      <b><p id="response-text"></p></b>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
